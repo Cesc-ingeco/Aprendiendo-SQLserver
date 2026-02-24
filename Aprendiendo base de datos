@@ -1,0 +1,13 @@
+/*** Aprendiendo a manejar una base de datos ***/
+
+-- De esta forma podemos crear nuestra base de datos:
+Create database BDEjemplo1
+Go
+
+-- Este codigo nos permitirá usar y realizar diferentes modificaciones o alteraciones dentro de nuestra base de datos:
+Use BDEjemplo1
+Go
+
+-- Finalmente de esta forma eliminaremos nuestra base de datos:
+Drop database BDEjemplo1
+Go
