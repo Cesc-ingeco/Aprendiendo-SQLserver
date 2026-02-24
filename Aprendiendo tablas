@@ -1,0 +1,24 @@
+/*** Aprendiendo a manejar tablas ***/
+
+-- De esta forma crearemos tablas dentro de nuestra base de datos:
+-- Nota: Para realizar estas acciones debemos asegurarnos que ya tengamos creado y usado nuestra base de datos, porque todo estas acciones se realizaran sobre ello.
+
+Create table Cliente 
+(
+    IDCLIENTE int primary key,
+    NOMBRE varchar(50) not null,
+    EMAIL varchar(100)
+)
+go
+
+-- El primary key o clave primaria, tiene la cualidad de ser not null automáticamente y único.
+-- El go sirve como autoseparador para terminar una estructura de consulta de código en SQL, pero no es necesario aplicarlo, unicamente para estar ordenado y seguir una secuencia al momento 
+-- de ejecutarlo automáticamente.
+
+-- Int, es un tipo de dato numérico entero.
+-- Varchar, es un tipo de dato de caracteres junto a Char, pero este te brinda mayor cantidad de caracteres por ende se hace util en determinadas circunstancias.
+
+-- Nota: Se recomienda crear un backup para evitar perder una base de datos eliminada, evitando las problemáticas.
+
+-- Generalmente a los tablas se le asigna un ID, porque calza mejor con el primary key, ya que tiende a ser valor único, sin not null, entero, asimismo posteriormente a través de ello se logrará
+-- relacionar con otras tablas creadas, y de esa manera hacer una consulta más completa. 
