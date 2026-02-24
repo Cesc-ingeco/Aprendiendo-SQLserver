@@ -1,0 +1,37 @@
+/*** Esquemas ***/
+-- Son contenedores lógicos que garantiza la organización de objetos, tablas, vistas, funciones, permisos, etc. en general la administración de bases de datos y estructura de estos mismos.
+-- Evitando de esa forma generar conflictos en la organización, arquitectura en la base de datos.
+
+create schema Ventas
+
+-- Este código nos permite crear el esquema de "Ventas", sirviendo de buena practica al momento de organizar o gestionar nuestra base de datos, y sea aún más entendible para otros usuarios.
+
+Select * from sys.schemas
+
+-- Mediante este codigo podremos visualizar todos nuestros esquemas creados.
+
+Create table Ventas.clientes 
+( 
+ 
+ IDCliente int primary key,
+ Nombre varchar (50),
+ Ciudad varchar (20),
+ Salario decimal (10,2)
+)
+Go
+
+-- Mediante el siguiente codigo, podremos crear una tabla teniendo en cuenta que aparecerá como:
+-- "Ventas.Clientes", en diferencia a comparación de "dbo.Usuarios" que se genera predeterminadamente.
+
+-- De esta forma puedes crear tablas a partir de esquemas que sirvan unicamente par tablas, ventas, vistias, etc. Por tal motivo planteas una mejor arquitectura y organización para la base de datos.
+-- Ahora si quieres armar relaciones, insertar datos, actualizar datos, etc. deberás hacerlo bajo ese mismo formato detallando el esquema y tabla "Ventas.clientes", de lo contrario se gestaria problemas.
+
+select * from clientes -- Esta es la forma general y tradicional
+select * from Ventas.clientes -- Esta forma es especificando el esquema y tabla
+
+-- Ahora si quieres eliminar el esquema: 
+-- 1. primero debes eliminar las tablas creadas a partir del esquema
+Drop table Ventas.clientes
+
+-- 2. segundo eliminar el esquema en general 
+Drop schema Ventas 
