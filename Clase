@@ -1,0 +1,7 @@
+### Tocaremos el tema de Esquemas 
+-- Esquemas: contenedores logicos que garantiza objetos dentro de una base de datos. Organiza los objetos (tablas, vistas, condiciones, funciones, etc.) dentro de la base de datos. Es una estructura que permite agrupar, administrar los objetos 
+-- bajo un mismo nombre, de esta manera organizar objetos, controlar permisos, mejorar la administración de base de datos, evitar conflictos de nombres, etc.
+
+-- Como creamos un esquema? 
+-- Las tablas que creamos tienen como nombre predeterminado:
+-- dbo.Usuarios
